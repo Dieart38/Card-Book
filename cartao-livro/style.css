@@ -52,7 +52,7 @@ h1{
     position: absolute; /* Define a posição como absoluta */
     width: 100%; /* Define a largura como 100% do contêiner pai */
     height: 100%; /* Define a altura como 100% do contêiner pai */
-    background-image: url(../img/bg5.jpeg); /* Define a imagem de fundo */
+    background-image: url(bg5.jpeg); /* Define a imagem de fundo */
     background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir o contêiner */
     background-position: center; /* Centraliza a posição da imagem de fundo */
     transform-origin: 0; /* Define a origem da transformação */
