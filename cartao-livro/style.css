@@ -1,0 +1,94 @@
+.vibur-regular {
+    font-family: "Vibur", cursive; /* Define a fonte "Vibur" com estilo cursivo */
+    font-weight: 400; /* Define o peso da fonte como normal (400) */
+    font-style: normal; /* Define o estilo da fonte como normal */
+}
+
+*{
+    margin: 0; /* Remove todas as margens padrão */
+    padding: 0; /* Remove todos os preenchimentos padrão */
+    box-sizing: border-box; /* Define o box-sizing para incluir bordas e preenchimentos no tamanho total */
+    font-family:  "Vibur", cursive; /* Define a fonte "Vibur" como padrão para todos os elementos */
+}
+
+body{
+    display: flex; /* Define o corpo como um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    width: 100%; /* Define a largura como 100% da janela de visualização */
+    height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+    background-color: rgb(36, 35, 35); /* Define a cor de fundo como um tom escuro */
+}
+
+h1{
+    text-shadow: 1px 2px 4px #6c1875; /* Adiciona uma sombra ao texto */
+    text-align: center; /* Centraliza o texto */
+    font-size: 36px; /* Define o tamanho da fonte como 36px */
+}
+
+.container{
+    display: flex; /* Define o contêiner como flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.book{
+    position: relative; /* Define a posição como relativa */
+    width: 260px; /* Define a largura como 260px */
+    height: 350px; /* Define a altura como 350px */
+    border-radius: 10px; /* Define bordas arredondadas com raio de 10px */
+    background-color: #9e8da9; /* Define a cor de fundo */
+    box-shadow: 1px 1px 12px #000; /* Adiciona uma sombra ao elemento */
+    transform: preserve-3d; /* Preserva a transformação 3D */
+    perspective: 2000px; /* Define a perspectiva 3D */
+    display: flex; /* Define o contêiner como flexível */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    color: #000; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.cover{
+    top: 0; /* Define a posição superior como 0 */
+    position: absolute; /* Define a posição como absoluta */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    height: 100%; /* Define a altura como 100% do contêiner pai */
+    background-image: url(../img/bg5.jpeg); /* Define a imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir o contêiner */
+    background-position: center; /* Centraliza a posição da imagem de fundo */
+    transform-origin: 0; /* Define a origem da transformação */
+    box-shadow: 1px 1px 12px #000; /* Adiciona uma sombra ao elemento */
+    display: flex; /* Define o contêiner como flexível */
+    flex-direction: column; /* Define a direção do layout flexível como coluna */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: space-around; /* Distribui o conteúdo com espaço ao redor */
+    transition: all 0.5s; /* Define uma transição suave para todas as propriedades */
+}
+
+.book:hover .cover, .book.touch .cover{
+    transition: all 0.5s; /* Define uma transição suave para todas as propriedades */
+    transform: rotateY(-80deg); /* Rotaciona o elemento em 80 graus no eixo Y */
+}
+
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .book {
+        width: 200px; /* Ajusta a largura do livro em telas menores */
+        height: 300px; /* Ajusta a altura do livro em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    }
+
+    .book {
+        width: 250px; /* Ajusta a largura do livro em telas muito pequenas */
+        height: 250px; /* Ajusta a altura do livro em telas muito pequenas */
+    }
+}
